@@ -62,7 +62,7 @@ async function getUser(u){
     return 0;
   }
   const j = await res.json()
-  const status = j['status'];
+  const status = j.profile.status;
   window.alert(status);
 } 
 
