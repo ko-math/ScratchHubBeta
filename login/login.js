@@ -1,7 +1,7 @@
 const send1 = document.querySelector('#nameSend');
 send1.addEventListener('click',function(){
   const userName = document.querySelector('#userName').value;
-  getUser();
+  getUser(userName);
   //削除
   document.querySelector('#inputType').remove();
   document.querySelector('#userName').remove();
@@ -51,5 +51,6 @@ function generateCode(list,a,b){
 }
 
 async function getUser(u){
-  return await fetch('https://api.scratch.mit.edu/users/' + u);
+  const res = await fetch('https://api.scratch.mit.edu/users/' + u);
+  const j = res.json();
 } 
