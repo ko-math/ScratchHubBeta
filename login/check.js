@@ -1,11 +1,11 @@
-import {userName} from './user.js';
+
 const div = document.querySelector('#input');
 const checkCode = document.createElement('p');
 checkCode.textContent = generateCode(init(),10,15);
 checkCode.classList.add('codeText');
 div.append(checkCode);
 addCopyButton(div,checkCode.textContent);
-getUser(userName);
+getUser('ko-math');
 
 //関数
 function init(){
