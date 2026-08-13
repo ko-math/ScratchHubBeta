@@ -1,7 +1,7 @@
 const send1 = document.querySelector('#nameSend');
 send1.addEventListener('click',function(){
   const userName = document.querySelector('#userName').value;
-  fetch('https://api.scratch.mit.edu/users/' + userName);
+  getUser();
   //削除
   document.querySelector('#inputType').remove();
   document.querySelector('#userName').remove();
@@ -36,9 +36,11 @@ function init(){
   list.push('_');
   return list;
 }
+
 function random(a,b){
   return Math.floor((b - a + 1) * Math.random()) + a;
 }
+
 function generateCode(list,a,b){
   let check = '';
   let checkLength = random(a,b);
@@ -47,3 +49,7 @@ function generateCode(list,a,b){
   }
   return check;
 }
+
+async function getUser(u){
+  return await fetch('https://api.scratch.mit.edu/users/' + u);
+} 
