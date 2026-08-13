@@ -3,7 +3,7 @@ function addCopyButton(parent,copyText){
   b.textContent = 'copy';
   parent.append(b);
   b.addEventListener('click',function (){
-    navigator.clipboard.writeText(text);
-    window.alert('copied: ' + text);
+    navigator.clipboard.writeText(copyText);
+    window.alert('copied: ' + copyText);
   });
 }
