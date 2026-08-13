@@ -9,7 +9,7 @@ body {
 .codeText {
   background-color: #111111;
   color: #dddddd;
-  margin: 20px;
+  padding: 20px;
   border-radius: 5px;
   width: 75%;
 }
