@@ -47,7 +47,7 @@ button {
   color: #000000;
   border: none;
   border-radius: 10px;
-  padding: 10px 20px;
+  padding: 10px;
   z-index: 0;
   overflow: hidden;
 }
@@ -58,10 +58,10 @@ button::before {
   inset: -50%;
   background: conic-gradient(
     transparent 0deg,
-    transparent 300deg,
-    #ff0000 330deg,
-    #00ff00 345deg,
-    #0000ff 360deg
+    transparent 90deg,
+    #00b2bfff 180deg,
+    #00b2bf80 270deg,
+    #00b2bf00 360deg
   );
   animation: border-spin 2s linear infinite;
   z-index: -2;
