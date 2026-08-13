@@ -10,15 +10,21 @@ send1.addEventListener('click',async function(){
   send1.remove();
   userNameInput.remove();
   document.querySelector('#inputType').textContent = '確認コード';
-  
+  //checkCode
   const div = document.querySelector('#input');
   const checkCode = document.createElement('p');
   const code = generateCode(init());
   checkCode.textContent = code;
   checkCode.classList.add('codeText');
+  //認証
+  const b = document.createElement('button');
+  b.id = 'verify';
+  b.textContent = '認証';
+  
   div.append(checkCode);
   addCopyButton(div,checkCode.textContent);
-  await getUser('ko-math','get');  
+  div.append(b);
+  await getUser(userName,'get');  
 });
 
 //関数
