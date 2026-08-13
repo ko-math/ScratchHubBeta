@@ -24,6 +24,6 @@ send1.addEventListener('click',function(){
   alert(userName);
 });
 
-funtion random(a,b){
+function random(a,b){
   return Math.floor((b - a + 1) * Math.random()) + a;
 }
