@@ -9,7 +9,8 @@ send1.addEventListener('click',async function(){
   }
   send1.remove();
   userNameInput.remove();
-  document.querySelector('');
+  document.querySelector('#inputType').textContent = '確認コード';
+  
   const div = document.querySelector('#input');
   const checkCode = document.createElement('p');
   const code = generateCode(init());
