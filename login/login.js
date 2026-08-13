@@ -5,6 +5,7 @@ send1.addEventListener('click',async function(){
   const er = await getUser(userName,'isVaild');
   if(er){
     window.alert('有効なユーザー名を入力してください。')
+    location.reload();
     return 0;
   }
   send1.remove();
@@ -25,7 +26,7 @@ send1.addEventListener('click',async function(){
   addCopyButton(div,checkCode.textContent);
   div.append(b);
   await getUser(userName,'get');  
-});
+},{once:true});
 
 //関数
 function init(){
