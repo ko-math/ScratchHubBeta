@@ -1,4 +1,6 @@
 .code {
-  background-color:#111111;
+  background-color: #111111;
   color: #dddddd;
+  margin: 10px;
+  border-radius: 10%;
 }
