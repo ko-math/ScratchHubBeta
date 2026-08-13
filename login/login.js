@@ -37,13 +37,15 @@ function init(){
   return list;
 }
 
-function random(a,b){
-  return Math.floor((b - a + 1) * Math.random()) + a;
+function random(a, b) {
+  const array = new Uint32Array(1);
+  crypto.getRandomValues(array);
+  return a + (array[0] % (b - a + 1));
 }
 
 function generateCode(list,a,b){
   let check = '';
-  let checkLength = random(a,b);
+  let checkLength = 13;
   for(let i = 0;i < checkLength;i++){
     check += list[random(0,list.length - 1)] 
   }
