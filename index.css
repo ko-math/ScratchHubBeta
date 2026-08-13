@@ -14,13 +14,18 @@
 header {
   background-color: #aaaaaa;
   width: 100%;
-  height: auto;
+  height: 100px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
 }
+body{
+  margin: 0px;
+  padding-top: 100px;
+}
+
 .codeText {
   background-color: #111111;
   color: #dddddd;
