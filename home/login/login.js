@@ -1,9 +1,9 @@
-alert(generateCode(init(),10,15));
+const checkCode = generateCode(init(),10,15));
 
 const send1 = document.querySelector('#nameSend');
 send1.addEventListener('click',function(){
   const userName = document.querySelector('#userName').value;
-  alert(userName);
+  
 });
 
 //関数
