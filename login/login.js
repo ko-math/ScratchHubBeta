@@ -55,5 +55,5 @@ async function getUser(u){
   const res = await fetch('https://trampoline.turbowarp.org/api/users/' + u);
   const j = await res.json()
   const er = Object.hasOwn(j,'error');
-  window.alert(j);
+  window.alert(er);
 } 
