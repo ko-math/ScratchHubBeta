@@ -18,7 +18,7 @@ send1.addEventListener('click',async function(){
   checkCode.classList.add('codeText');
   div.append(checkCode);
   addCopyButton(div,checkCode.textContent);
-  getUser('ko-math');  
+  await getUser('ko-math');  
 });
 
 //関数
