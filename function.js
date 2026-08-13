@@ -4,5 +4,6 @@ function addCopyButton(parent,copyText){
   parent.append(b);
   b.addEventListener('click',function (){
     navigator.clipboard.writeText(text);
+    window.alert('copied: ' + text);
   });
 }
