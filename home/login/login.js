@@ -1,9 +1,15 @@
-const checkCode = generateCode(init(),10,15));
-
 const send1 = document.querySelector('#nameSend');
 send1.addEventListener('click',function(){
   const userName = document.querySelector('#userName').value;
-  
+  //ユーザー名確認
+  document.querySelector('#inputType').remove();
+  send1.remove();
+  const div = document.querySelector('#input');
+  const p = document.createElement('p');
+  p.textContent = '確認コード';
+  const checkCode = document.createElement('p');
+  checkCode.textContent = generateCode(init(),10,15));
+  div.input(p);
 });
 
 //関数
