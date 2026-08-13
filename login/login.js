@@ -13,7 +13,7 @@ send1.addEventListener('click',function(){
   
   const checkCode = document.createElement('p');
   checkCode.textContent = generateCode(init(),10,15);
-  checkCode.classList.add('code');
+  checkCode.classList.add('codeText');
   
   div.append(p);
   div.append(checkCode);
