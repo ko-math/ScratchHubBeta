@@ -35,6 +35,7 @@ button {
   color:#000000;
   border: 4px solid #666666;
   border-radius: 5px;
+  animation: button-border 3s linear infinite;
 }
 button :hover{
   animation: button-border 3s linear infinite;
