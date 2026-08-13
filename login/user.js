@@ -1,6 +1,6 @@
 const send1 = document.querySelector('#nameSend');
-export const userName = document.querySelector('#userName').value;
 send1.addEventListener('click',async function(){
+  const userName = document.querySelector('#userName').value;
   const er = await getUser(userName);
   if(er){
     window.alert('有効なユーザー名を入力してください。')
