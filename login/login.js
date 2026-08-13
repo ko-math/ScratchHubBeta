@@ -53,6 +53,6 @@ function generateCode(list,a,b){
 async function getUser(u){
   //window.alert('debug');
   const res = await fetch('https://trampoline.turbowarp.org/api/users/' + u);
-  const j = await res.json();
-  window.alert(res);
+  const j = await res.json().hasOwn('error');
+  window.alert(j);
 } 
