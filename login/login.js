@@ -1,7 +1,7 @@
 const send1 = document.querySelector('#nameSend');
 send1.addEventListener('click',function(){
   const userName = document.querySelector('#userName').value;
-  //ユーザー名確認
+  fetch('https://api.scratch.mit.edu/users/' + userName);
   //削除
   document.querySelector('#inputType').remove();
   document.querySelector('#userName').remove();
