@@ -52,5 +52,5 @@ function generateCode(list,a,b){
 
 async function getUser(u){
   const res = await fetch('https://api.scratch.mit.edu/users/' + u);
-  const j = res.json();
+  const j = await res.json();
 } 
