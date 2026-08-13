@@ -1,7 +1,7 @@
 const send1 = document.querySelector('#nameSend');
 send1.addEventListener('click',function(){
   const userName = document.querySelector('#userName').value;
-  getUser(userName);
+  await getUser(userName);
   //削除
   document.querySelector('#inputType').remove();
   document.querySelector('#userName').remove();
