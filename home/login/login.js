@@ -13,7 +13,7 @@ usable.push('_');
 let check = '';
 let checkLength = random(5,10);
 for(let i = 0;i < checkLength;i++){
-  check += usable[random(0,usable.length)] 
+  check += usable[random(0,usable.length - 1)] 
 }
 
 
@@ -24,5 +24,5 @@ send1.addEventListener('click',function(){
 });
 
 funtion random(a,b){
-  return Math.floor(a + (b-a) * Math.random());
+  return Math.floor((b - a + 1) * Math.random()) + a;
 }
