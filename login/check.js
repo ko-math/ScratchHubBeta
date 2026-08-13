@@ -58,6 +58,7 @@ async function getUser(u){
     location.assign('../#');
     return 0;
   }
-  const j = await res.json()['status'];
+  const j = await res.json()
+  const status = j['status'];
   window.alert(j);
 } 
