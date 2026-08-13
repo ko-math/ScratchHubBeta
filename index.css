@@ -1,6 +1,6 @@
 @font-face {
   font-family: "zen-light";
-  src: url("./font/zen_light.ttf") format("truetype");
+  src: url("../font/zen_light.ttf") format("truetype");
 }
 body {
   font-family: "zen-light";
@@ -11,5 +11,5 @@ body {
   color: #dddddd;
   margin: 20px;
   border-radius: 5px;
-  width: 75%
+  width: 75%;
 }
