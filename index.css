@@ -1,6 +1,6 @@
 @font-face {
   font-family: "zen-light";
-  src: url("../font/zen_light.ttf") format("truetype");
+  src: url("./font/zen_light.ttf") format("truetype");
 }
 body {
   font-family: "zen-light";
