@@ -31,7 +31,8 @@ header {
 }
 
 button {
-  background-color: #000000;
+  background-color: #dddddd;
+  color:#000000;
   border: 4px solid #666666;
   border-radius: 5px;
 }
