@@ -1,7 +1,5 @@
 const send1 = document.querySelector('#nameSend');
-window.alert('1');
 send1.addEventListener('click',async function(){
-  window.alert('2');
   const userName = document.querySelector('#userName').value;
   await getUser(userName);
   //削除
@@ -53,8 +51,8 @@ function generateCode(list,a,b){
 }
 
 async function getUser(u){
-  window.alert('debug');
+  //window.alert('debug');
   const res = await fetch('https://trampoline.turbowarp.org/api/users/' + u);
   const j = await res.json();
-  window.alert(j);
+  window.alert(res);
 } 
