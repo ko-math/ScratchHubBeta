@@ -4,6 +4,7 @@ send1.addEventListener('click',function(){
   //ユーザー名確認
   //削除
   document.querySelector('#inputType').remove();
+  document.querySelector('#userName').remove();
   send1.remove();
   //追加
   const div = document.querySelector('#input');
