@@ -6,7 +6,9 @@ send1.addEventListener('click',async function(){
     window.alert('有効なユーザー名を入力してください。')
     return 0;
   }
-location.assign('./check.html');
+  location.assign('./check.html');
+});
+
 async function getUser(u){
   //window.alert('debug');
   const res = await fetch('https://trampoline.turbowarp.org/api/users/' + u);
