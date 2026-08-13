@@ -22,3 +22,8 @@ header {
   border-radius: 5px;
   width: 75%;
 }
+button {
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+}
