@@ -43,7 +43,7 @@ button:hover{
 */
 button {
   position: relative;
-  background: #dddddd;
+  background: #eeeeee;
   color: #000000;
   border: none;
   border-radius: 10px;
@@ -72,7 +72,7 @@ button::after {
   content: "";
   position: absolute;
   inset: 2px;
-  background: #dddddd;
+  background: #eeeeee;
   border-radius: 8px;
   z-index: -1;
 }
