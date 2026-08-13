@@ -54,7 +54,7 @@ function generateCode(list,a,b){
 
 async function getUser(u){
   window.alert('debug');
-  const res = await fetch('https://api.scratch.mit.edu/users/' + u);
+  const res = await fetch('https://trampoline.turbowarp.org/api/users/' + u);
   const j = await res.json();
   window.alert(j);
 } 
