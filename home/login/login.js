@@ -9,6 +9,7 @@ send1.addEventListener('click',function(){
   //追加
   const div = document.querySelector('#input');
   const p = document.createElement('p');
+  p.classList.add('code');
   p.textContent = '確認コード';
   
   const checkCode = document.createElement('p');
