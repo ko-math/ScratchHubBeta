@@ -17,6 +17,7 @@ send1.addEventListener('click',function(){
   
   div.append(p);
   div.append(checkCode);
+  addCopyButton(div , checkCode.textContent);
 });
 
 //関数
