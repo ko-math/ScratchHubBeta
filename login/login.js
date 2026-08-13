@@ -2,7 +2,7 @@ const send1 = document.querySelector('#nameSend');
 send1.addEventListener('click',async function(){
   const userNameInput = document.querySelector('#userName');
   const userName = userNameInput.value;
-  const er = await isVaild(userName);
+  const er = await getUser(userName,'isVaild');
   if(er){
     window.alert('有効なユーザー名を入力してください。')
     return 0;
@@ -18,7 +18,7 @@ send1.addEventListener('click',async function(){
   checkCode.classList.add('codeText');
   div.append(checkCode);
   addCopyButton(div,checkCode.textContent);
-  await getUser('ko-math');  
+  await getUser('ko-math','get');  
 });
 
 //関数
@@ -53,7 +53,7 @@ function generateCode(list){
   return check;
 }
 
-async function getUser(u){
+async function getUser(u,type){
   //window.alert('debug');
   const res = await fetch('https://trampoline.turbowarp.org/api/users/' + u);
   if(!res.ok){
@@ -61,14 +61,15 @@ async function getUser(u){
     location.assign('../#');
     return 0;
   }
-  const j = await res.json()
-  const status = j.profile.bio;
-  window.alert(status);
-} 
-
-async function isVaild(u){
-  //window.alert('debug');
-  const res = await fetch('https://trampoline.turbowarp.org/api/users/' + u);
-  const j = await res.json()
-  return Object.hasOwn(j,'error');
+  switch(type){
+    case 'get':
+      const j = await res.json();
+      const status = j.profile.bio;
+      window.alert(status);
+      break;
+    case 'isVaild':
+      const j = await res.json()
+      return Object.hasOwn(j,'error');
+      break;
+  }
 } 
