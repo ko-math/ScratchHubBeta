@@ -15,6 +15,7 @@ let checkLength = random(5,10);
 for(let i = 0;i < checkLength;i++){
   check += usable[random(0,usable.length - 1)] 
 }
+alert(check);
 
 
 const send1 = document.querySelector('#nameSend');
