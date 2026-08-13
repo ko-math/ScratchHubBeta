@@ -37,6 +37,6 @@ button {
   border-radius: 10px;
   animation: button-border 3s linear infinite;
 }
-button :hover{
+button:hover{
   animation: button-border 3s linear infinite;
 }
