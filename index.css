@@ -13,7 +13,9 @@
 /*↑フォント*/
 header {
   height: auto;
-  background-color: #000000;
+  background-color: #dddddd;
+  color:#00b2bf;
+  margin:0px;
 }
 .codeText {
   background-color: #111111;
@@ -23,24 +25,6 @@ header {
   width: 75%;
 }
 
-@keyframes button-border{
-  0% {border-color: #ff0000;}
-  33% {border-color: #00ff00;}
-  66% {border-color: #0000ff;}
-  100% {border-color: #ff0000;}
-}
-/*
-button {
-  background-color: #dddddd;
-  color:#000000;
-  border: 2px solid #666666;
-  border-radius: 10px;
-  animation: button-border 3s linear infinite;
-}
-button:hover{
-  animation: button-border 3s linear infinite;
-}
-*/
 button {
   position: relative;
   background: #eeeeee;
