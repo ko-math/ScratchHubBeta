@@ -29,7 +29,7 @@ header {
   66% {border-color: #0000ff;}
   100% {border-color: #ff0000;}
 }
-
+/*
 button {
   background-color: #dddddd;
   color:#000000;
@@ -39,4 +39,45 @@ button {
 }
 button:hover{
   animation: button-border 3s linear infinite;
+}
+*/
+button {
+  position: relative;
+  background: #dddddd;
+  color: #000000;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    transparent 0deg,
+    transparent 300deg,
+    #ff0000 330deg,
+    #00ff00 345deg,
+    #0000ff 360deg
+  );
+  animation: border-spin 2s linear infinite;
+  z-index: -2;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #dddddd;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+@keyframes border-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
