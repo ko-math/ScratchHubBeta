@@ -67,14 +67,15 @@ async function getUser(u,type){
     location.assign('../#');
     return 0;
   }
+  let j;
   switch(type){
     case 'get':
-      const j = await res.json();
+      j = await res.json();
       const status = j.profile.bio;
       window.alert(status);
       break;
     case 'isVaild':
-      const j = await res.json()
+      j = await res.json()
       return Object.hasOwn(j,'error');
       break;
   }
