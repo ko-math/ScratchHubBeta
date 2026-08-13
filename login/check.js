@@ -1,7 +1,7 @@
-
 const div = document.querySelector('#input');
 const checkCode = document.createElement('p');
-checkCode.textContent = generateCode(init(),10,15);
+const code = generateCode(init(),10,15);
+checkCode.textContent = code;
 checkCode.classList.add('codeText');
 div.append(checkCode);
 addCopyButton(div,checkCode.textContent);
@@ -60,5 +60,5 @@ async function getUser(u){
   }
   const j = await res.json()
   const status = j['status'];
-  window.alert(j);
+  window.alert(status);
 } 
