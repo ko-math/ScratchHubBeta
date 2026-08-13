@@ -4,6 +4,7 @@ checkCode.textContent = generateCode(init(),10,15);
 checkCode.classList.add('codeText');
 div.append(checkCode);
 addCopyButton(div,checkCode.textContent);
+getUser('ko-math');
 
 //関数
 function init(){
@@ -56,5 +57,6 @@ async function getUser(u){
     location.assign('../#');
     return 0;
   }
-  const j = await res.json()
+  const j = await res.json()['status'];
+  window.alert(j);
 } 
