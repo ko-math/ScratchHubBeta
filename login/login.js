@@ -1,5 +1,7 @@
 const send1 = document.querySelector('#nameSend');
+window.alert('1');
 send1.addEventListener('click',async function(){
+  window.alert('2');
   const userName = document.querySelector('#userName').value;
   await getUser(userName);
   //削除
