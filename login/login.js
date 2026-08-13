@@ -41,7 +41,7 @@ function init(){
   return list;
 }
 
-function random(a, b) {
+function passwordRandom(a, b) {
   const array = new Uint32Array(1);
   crypto.getRandomValues(array);
   return a + (array[0] % (b - a + 1));
@@ -51,7 +51,7 @@ function generateCode(list,a,b){
   let check = '';
   let checkLength = 13;
   for(let i = 0;i < checkLength;i++){
-    check += list[random(0,list.length - 1)] 
+    check += list[passwordRandom(0,list.length - 1)] 
   }
   return check;
 }
