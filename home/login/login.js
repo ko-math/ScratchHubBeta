@@ -10,6 +10,7 @@ send1.addEventListener('click',function(){
   const checkCode = document.createElement('p');
   checkCode.textContent = generateCode(init(),10,15));
   div.input(p);
+  div.input(checkCode);
 });
 
 //関数
