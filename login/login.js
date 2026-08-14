@@ -35,10 +35,13 @@ send1.addEventListener('click',async function(){
   b.textContent = '認証';
   
   div.append(checkCode);
-  addCopyButton(div,checkCode.textContent);
+  addCopyButton(div,checkCode.textContent,'copy');
   div.append(br);
   div.append(b);
-  b.addEventListener('click' , async function () {
+  b.addEventListener('click',async function () {
+    p.textContent = '確認中です。お待ちください';
+    checkCode.remove();
+    b.remove();
     const comments = await getUser('ko-math','project','1368761391');
     const verify = comments.some((c) => c.content === code && c.author.username === userName);
     if(verify){
