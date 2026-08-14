@@ -38,15 +38,15 @@ send1.addEventListener('click',async function(){
   addCopyButton(div,checkCode.textContent);
   div.append(br);
   div.append(b);
-  /*
-  const bio = await getUser(userName,'get');
-  if(bio.includes(code)){
-    
-  } else {
-    inputType.textContent = '確認できませんでした。';
-    location.reload();
-  }
-  */
+  b.addEventListener('click' , function () {
+    const bio = await getUser(userName,'get');
+    if(bio.includes(code)){
+      p.textContent = '認証が完了しました。';
+    } else {
+      p.textContent = '確認できませんでした。';
+      location.reload();
+    }
+  });
 },{once: true});
 
 //関数
