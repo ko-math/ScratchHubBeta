@@ -10,7 +10,7 @@
   header.innerHTML = `
   <h2>募集</h2>
   `;
-  body.prepend(h);
+  body.prepend(header);
 });
 //機能
 function addCopyButton(parent,copyText){
