@@ -11,7 +11,7 @@ function addCopyButton(parent,copyText,id){
 }
 //progress
 class progress {
-  construtor(parent,max,id){
+  constructor(parent,max,id){
     const pr = document.createElement('progress');
     pr.max = max;
     pr.value = 0;
@@ -23,6 +23,7 @@ class progress {
   }
   update(value){
     const pr = document.querySelector('#' + this.id);
+    this.value = value;
     pr.value = value;
   }
 }
