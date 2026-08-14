@@ -10,15 +10,19 @@ function addCopyButton(parent,copyText,id){
   });
 }
 //progress
-function addProgressBar(parent,max,id){
-  const pr = document.createElement('progress');
-  pr.max = max;
-  pr.value = 0;
-  pr.id = id;
-  parent.append(pr);
-}
-
-function updateProgress(id,value){
-  const pr = document.querySelector('#' + id);
-  pr.value = value;
+class progress {
+  construtor(parent,max,id){
+    const pr = document.createElement('progress');
+    pr.max = max;
+    pr.value = 0;
+    pr.id = id;
+    this.max = max;
+    this.value = 0;
+    this.id = id;
+    parent.append(pr);
+  }
+  update(value){
+    const pr = document.querySelector('#' + this.id);
+    pr.value = value;
+  }
 }
