@@ -15,6 +15,9 @@ send1.addEventListener('click',async function(){
     location.reload();
     return 0;
   }
+  inputType.remove();
+  const h1 = 
+  
   inputType.textContent = '確認コード';
   //checkCode
   const div = document.querySelector('#input');
@@ -32,7 +35,13 @@ send1.addEventListener('click',async function(){
   addCopyButton(div,checkCode.textContent);
   div.append(br);
   div.append(b);
-  await getUser(userName,'get');  
+  const bio = await getUser(userName,'get');
+  if(bio.includes(code)){
+    
+  } else {
+    inputType.textContent = '確認できませんでした。';
+    location.reload();
+  }
 },{once: true});
 
 //関数
@@ -79,8 +88,8 @@ async function getUser(u,type){
         return 0;
       }
       j = await res.json();
-      const status = j.profile.bio;
-      window.alert(status);
+      const bio = j.profile.bio;
+      return bio;
       break;
     case 'isVaild':
       j = await res.json()
