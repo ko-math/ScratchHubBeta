@@ -84,7 +84,7 @@ function generateCode(list){
 
 async function getUser(u,type){
   //window.alert('debug');
-  const res = await fetch('https://api.scratch.mit.edu/users/' + u);
+  const res = await fetch('https://scratchtechnologynote.komath.workers.dev/scratch?username=' + u);
   let j;
   switch(type){
     case 'get':
