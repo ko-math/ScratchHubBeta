@@ -11,7 +11,7 @@
   <h2>募集</h2>
   `;
   body.prepend(header);
-});
+})();
 //機能
 function addCopyButton(parent,copyText){
   const b = document.createElement('button');
