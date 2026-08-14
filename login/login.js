@@ -99,7 +99,7 @@ async function getUser(u,type){
       break;
     case 'isVaild':
       j = await res.json()
-      return Object.hasOwn(j,'error');
+      return Object.hasOwn(j,'code') && j.code.toString().includes('NotFound');
       break;
   }
 } 
