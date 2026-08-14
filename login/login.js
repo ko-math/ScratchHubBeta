@@ -39,15 +39,9 @@ send1.addEventListener('click',async function(){
   div.append(br);
   div.append(b);
   b.addEventListener('click' , async function () {
-    const comments = await getUser(userName,'project','1368761391');
-    let isCode = false;
-    const SEE = 1;
-    for(let i = 0;i < SEE;i++){
-      if(comments[i].content === code){
-        isCode = true;
-      }
-    }
-    if(isCode){
+    const comments = await getUser('ko-math','project','1368761391');
+    const verify = comments.some((c) => c.content === code && c.author.username === userName);
+    if(verify){
       p.textContent = '認証が完了しました。';
     } else {
       p.textContent = '確認できませんでした。';
