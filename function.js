@@ -10,7 +10,7 @@ function addCopyButton(parent,copyText,id){
   });
 }
 //progress
-class progress {
+class ProgressBar {
   constructor(parent,max,id){
     const pr = document.createElement('progress');
     pr.max = max;
