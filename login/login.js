@@ -39,9 +39,15 @@ send1.addEventListener('click',async function(){
   div.append(br);
   div.append(b);
   b.addEventListener('click' , async function () {
-    const bio = await getUser(userName,'get');
-    window.alert(bio);
-    if(bio.includes(code)){
+    const comments = await getUser(userName,'project','1368761391');
+    let isCode = false;
+    const SEE = 1;
+    for(let i = 0;i < SEE;i++){
+      if(comments[i].content === code){
+        isCode = true;
+      }
+    }
+    if(isCode){
       p.textContent = '認証が完了しました。';
     } else {
       p.textContent = '確認できませんでした。';
@@ -82,12 +88,13 @@ function generateCode(list){
   return check;
 }
 
-async function getUser(u,type){
+async function getUser(u,type,project){
   //window.alert('debug');
-  const res = await fetch('https://scratchtechnologynote.komath.workers.dev/scratch?username=' + u);
+  let res;
   let j;
   switch(type){
-    case 'get':
+    case 'project':
+      res = await fetch(`https://api.scratch.mit.edu/users/${u}/projects/${project}/comments`);
       if(!res.ok){
         window.alert('エラーが発生しました。ホームへ戻ります。');
         location.assign('../#');
@@ -98,6 +105,7 @@ async function getUser(u,type){
       return bio;
       break;
     case 'isVaild':
+      res = await fetch('https://scratchtechnologynote.komath.workers.dev/scratch?username=' + u);
       j = await res.json()
       return Object.hasOwn(j,'code') && j.code.toString().includes('ResourceNotFound');
       break;
