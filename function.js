@@ -1,19 +1,4 @@
-/*
-構成
-・ページ内固定要素
-・機能
-*/
-
-//固定要素
-(() => {
-  const div = document.querySelector('#header');
-  const header = document.createElement('header');
-  header.innerHTML = `
-    <h2>募集</h2>
-  `;
-  div.append(header);
-})();
-//機能
+//copyButton
 function addCopyButton(parent,copyText){
   const b = document.createElement('button');
   b.textContent = 'copy';
