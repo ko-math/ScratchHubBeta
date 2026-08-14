@@ -12,14 +12,14 @@
 }
 /*↑フォント*/
 body{
-  padding-top:30px;
+  padding-top: 75px;
 }
 
 header {
   padding-top: 0px;
   background-color: #aaaaaa;
   width: 100%;
-  height: 30px;
+  height: 75px;
   position: fixed;
   top: 0;
   left: 0;
