@@ -1,4 +1,4 @@
-addProgressBar();
+const pb = addProgressBar(document.querySelector('#progress1'),100,'progressBar1');
 
 const send1 = document.querySelector('#nameSend');
 send1.addEventListener('click',async function(){
@@ -37,12 +37,12 @@ send1.addEventListener('click',async function(){
   b.textContent = '認証';
   
   div.append(checkCode);
-  addCopyButton(div,checkCode.textContent,'copy');
+  const copyButton = addCopyButton(div,checkCode.textContent,'copy');
   div.append(br);
   div.append(b);
   b.addEventListener('click',async function () {
     p.textContent = '確認中です。お待ちください';
-    document.querySelector('#copy').remove();
+    const copyButton.remove();
     checkCode.remove();
     b.remove();
     const comments = await getUser('ko-math','project','1368761391');
