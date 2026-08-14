@@ -1,5 +1,6 @@
 const send1 = document.querySelector('#nameSend');
 send1.addEventListener('click',async function(){ 
+  window.alert(1);
   const div = document.querySelector('#input');
   
   const userNameInput = document.querySelector('#userName');
