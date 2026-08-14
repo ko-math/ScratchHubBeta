@@ -41,6 +41,7 @@ send1.addEventListener('click',async function(){
   div.append(b);
   b.addEventListener('click' , async function () {
     const bio = await getUser(userName,'get');
+    window.alert(bio);
     if(bio.includes(code)){
       p.textContent = '認証が完了しました。';
     } else {
