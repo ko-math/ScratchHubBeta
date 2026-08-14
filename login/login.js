@@ -85,7 +85,7 @@ function generateCode(list){
 
 async function getUser(u,type){
   //window.alert('debug');
-  const res = await fetch('https://trampoline.turbowarp.org/api/users/' + u);
+  const res = await fetch('https://api.scratch.mit.edu/users/' + u);
   let j;
   switch(type){
     case 'get':
