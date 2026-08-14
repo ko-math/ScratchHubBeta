@@ -39,7 +39,7 @@ send1.addEventListener('click',async function(){
   addCopyButton(div,checkCode.textContent);
   div.append(br);
   div.append(b);
-  b.addEventListener('click' , function () {
+  b.addEventListener('click' , async function () {
     const bio = await getUser(userName,'get');
     if(bio.includes(code)){
       p.textContent = '認証が完了しました。';
