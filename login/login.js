@@ -88,7 +88,7 @@ async function getUser(u,type,project){
   let j;
   switch(type){
     case 'project':
-      res = await fetch(`https://scratchtechnologynote.komath.workers.dev/scratch/projectComments?username=${u}&project=${project}`);
+      res = await fetch(`https://scapi.komath.workers.dev/scratch/projectComments?username=${u}&project=${project}`);
       if(!res.ok){
         window.alert('エラーが発生しました。ホームへ戻ります。');
         location.assign('../#');
