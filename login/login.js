@@ -1,3 +1,5 @@
+addProgressBar();
+
 const send1 = document.querySelector('#nameSend');
 send1.addEventListener('click',async function(){
   const div = document.querySelector('#input');
