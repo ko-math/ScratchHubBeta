@@ -38,6 +38,7 @@ send1.addEventListener('click',async function(){
   addCopyButton(div,checkCode.textContent);
   div.append(br);
   div.append(b);
+  /*
   const bio = await getUser(userName,'get');
   if(bio.includes(code)){
     
@@ -45,6 +46,7 @@ send1.addEventListener('click',async function(){
     inputType.textContent = '確認できませんでした。';
     location.reload();
   }
+  */
 },{once: true});
 
 //関数
