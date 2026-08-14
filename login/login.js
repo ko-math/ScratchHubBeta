@@ -2,21 +2,27 @@ const send1 = document.querySelector('#nameSend');
 send1.addEventListener('click',async function(){
   const userNameInput = document.querySelector('#userName');
   const userName = userNameInput.value;
+
+  const inputType = document.querySelector('#inputType');
+  inputType.textContent = '確認中です。お待ちください';
+  userNameInput.remove();
+  send1.remove();
+  
   const er = await getUser(userName,'isVaild');
   if(er){
-    window.alert('有効なユーザー名を入力してください。')
+    inputType.textContent = 'ユーザーが発見されませんでした。';
+    window.alert('有効なユーザー名を入力してください。');
     location.reload();
     return 0;
   }
-  send1.remove();
-  userNameInput.remove();
-  document.querySelector('#inputType').textContent = '確認コード';
+  inputType.textContent = '確認コード';
   //checkCode
   const div = document.querySelector('#input');
   const checkCode = document.createElement('p');
   const code = generateCode(init());
   checkCode.textContent = code;
   checkCode.classList.add('codeText');
+  const br = document.createElement('br');
   //認証
   const b = document.createElement('button');
   b.id = 'verify';
@@ -24,6 +30,7 @@ send1.addEventListener('click',async function(){
   
   div.append(checkCode);
   addCopyButton(div,checkCode.textContent);
+  div.append(br);
   div.append(b);
   await getUser(userName,'get');  
 },{once: true});
