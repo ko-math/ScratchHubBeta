@@ -1,26 +1,29 @@
 const send1 = document.querySelector('#nameSend');
-send1.addEventListener('click',async function(){
+send1.addEventListener('click',async function(){ 
+  const div = document.querySelector('#input');
+  
   const userNameInput = document.querySelector('#userName');
   const userName = userNameInput.value;
-
   const inputType = document.querySelector('#inputType');
-  inputType.textContent = '確認中です。お待ちください';
+  
+  inputType.textContent = '認証';
   userNameInput.remove();
   send1.remove();
   
+  const p = document.createElement('p');
+  p.textContent = '確認中です。お待ちください';
+  div.append(p);
+  
   const er = await getUser(userName,'isVaild');
   if(er){
-    inputType.textContent = 'ユーザーが発見されませんでした。';
+    p.textContent = 'ユーザーが発見されませんでした。';
     window.alert('有効なユーザー名を入力してください。');
     location.reload();
     return 0;
   }
-  inputType.remove();
-  const h1 = 
-  
-  inputType.textContent = '確認コード';
+  inputType.textContent = '確認コード'; 
+  p.textContent = 'タブが非アクティブになる前に認証してください。';
   //checkCode
-  const div = document.querySelector('#input');
   const checkCode = document.createElement('p');
   const code = generateCode(init());
   checkCode.textContent = code;
