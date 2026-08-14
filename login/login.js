@@ -95,8 +95,7 @@ async function getUser(u,type,project){
         return 0;
       }
       j = await res.json();
-      const bio = j.profile.bio;
-      return bio;
+      return j;
       break;
     case 'isVaild':
       res = await fetch('https://trampoline.turbowarp.org/api/users/' + u);
