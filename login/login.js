@@ -26,7 +26,7 @@ send1.addEventListener('click',async function(){
   addCopyButton(div,checkCode.textContent);
   div.append(b);
   await getUser(userName,'get');  
-},{once:true});
+},{once: true});
 
 //関数
 function init(){
