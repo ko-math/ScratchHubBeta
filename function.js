@@ -9,3 +9,16 @@ function addCopyButton(parent,copyText,id){
     window.alert('copied: ' + copyText);
   });
 }
+//progress
+function addProgressBar(parent,max,id){
+  const pr = document.createElement('progress');
+  pr.max = max;
+  pr.value = 0;
+  pr.id = id;
+  parent.append(pr);
+}
+
+function updateProgress(id,value){
+  const pr = document.querySelector('#' + id);
+  pr.value = value;
+}
