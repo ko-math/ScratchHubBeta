@@ -3,14 +3,15 @@
 ・ページ内固定要素
 ・機能
 */
+
 //固定要素
 (() => {
-  const body = document.querySelector('body');
+  const div = document.querySelector('#header');
   const header = document.createElement('header');
   header.innerHTML = `
-  <h2>募集</h2>
+    <h2>募集</h2>
   `;
-  body.prepend(header);
+  div.append(header);
 })();
 //機能
 function addCopyButton(parent,copyText){
