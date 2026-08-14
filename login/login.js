@@ -63,14 +63,14 @@ function generateCode(list){
 async function getUser(u,type){
   //window.alert('debug');
   const res = await fetch('https://trampoline.turbowarp.org/api/users/' + u);
-  if(!res.ok){
-    window.alert('エラーが発生しました。ホームへ戻ります。');
-    location.assign('../#');
-    return 0;
-  }
   let j;
   switch(type){
     case 'get':
+      if(!res.ok){
+        window.alert('エラーが発生しました。ホームへ戻ります。');
+        location.assign('../#');
+        return 0;
+      }
       j = await res.json();
       const status = j.profile.bio;
       window.alert(status);
