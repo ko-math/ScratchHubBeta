@@ -105,9 +105,9 @@ async function getUser(u,type,project){
       return bio;
       break;
     case 'isVaild':
-      res = await fetch('https://scratchtechnologynote.komath.workers.dev/scratch?username=' + u);
+      res = await fetch('https://trampoline.turbowarp.org/api/users/' + u);
       j = await res.json()
-      return Object.hasOwn(j,'code') && j.code.toString().includes('ResourceNotFound');
+      return Object.hasOwn(j,'error');
       break;
   }
 } 
