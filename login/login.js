@@ -24,7 +24,11 @@ send1.addEventListener('click',async function(){
     return 0;
   }
   inputType.textContent = '確認コード'; 
-  p.textContent = 'タブが非アクティブになる前に認証してください。';
+  p.textContent = 'タブが非アクティブになる前に認証してください。\n認証用プロジェクト:';
+  const a = document.createElement('a');
+  a.href = 'https://scratch.mit.edu/projects/1368761391/';
+  a.textContent = '認証用プロジェクト';
+  
   //checkCode
   const checkCode = document.createElement('p');
   const code = generateCode(init());
@@ -42,6 +46,7 @@ send1.addEventListener('click',async function(){
   div.append(b);
   b.addEventListener('click',async function () {
     p.textContent = '確認中です。お待ちください';
+    a.remove();
     copyButton.remove();
     checkCode.remove();
     b.remove();
