@@ -27,6 +27,7 @@ send1.addEventListener('click',async function(){
   p.textContent = 'タブが非アクティブになる前に認証してください。';
   const a = document.createElement('a');
   a.href = 'https://scratch.mit.edu/projects/1368761391/';
+  a.target = '_blank';
   a.textContent = '認証用プロジェクト';
   div.append(a);
   
