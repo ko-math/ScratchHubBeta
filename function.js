@@ -12,18 +12,13 @@ function addCopyButton(parent,copyText,id){
 //progress
 class ProgressBar {
   constructor(parent,max,id){
-    const pr = document.createElement('progress');
-    pr.max = max;
-    pr.value = 0;
-    pr.id = id;
-    this.max = max;
-    this.value = 0;
-    this.id = id;
-    parent.append(pr);
+    this.pr = document.createElement('progress');
+    this.pr.max = max;
+    this.pr.value = 0;
+    this.pr.id = id;
+    parent.append(this.pr);
   }
   update(value){
-    const pr = document.querySelector('#' + this.id);
-    this.value = value;
-    pr.value = value;
+    this.pr.value = value;
   }
 }
