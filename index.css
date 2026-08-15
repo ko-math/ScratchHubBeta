@@ -45,7 +45,7 @@ button {
   z-index: 0;
   overflow: hidden;
 }
-.copyButton {
+.hButton {
   pading-top: 10px;
   z-index: 20;
 }
