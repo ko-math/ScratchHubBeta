@@ -8,6 +8,7 @@ function addCopyButton(parent,copyText,id){
     navigator.clipboard.writeText(copyText);
     window.alert('copied: ' + copyText);
   });
+  return b;
 }
 //progress
 class ProgressBar {
