@@ -45,7 +45,8 @@ button {
   z-index: 0;
   overflow: hidden;
 }
-.hButton {
+.header {
+  position: fixed;
   padding-top: 10px;
   z-index: 20;
 }
