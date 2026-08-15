@@ -46,7 +46,7 @@ button {
   overflow: hidden;
 }
 .header {
-  position: fixed;
+  position: absolute;
   padding-top: 10px;
   z-index: 20;
 }
