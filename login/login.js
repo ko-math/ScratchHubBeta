@@ -42,7 +42,7 @@ send1.addEventListener('click',async function(){
   div.append(b);
   b.addEventListener('click',async function () {
     p.textContent = '確認中です。お待ちください';
-    const copyButton.remove();
+    copyButton.remove();
     checkCode.remove();
     b.remove();
     const comments = await getUser('ko-math','project','1368761391');
