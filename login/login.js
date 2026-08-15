@@ -24,7 +24,7 @@ send1.addEventListener('click',async function(){
     return 0;
   }
   inputType.textContent = '確認コード'; 
-  p.textContent = 'タブが非アクティブになる前に認証してください。;
+  p.textContent = 'タブが非アクティブになる前に認証してください。';
   const a = document.createElement('a');
   a.href = 'https://scratch.mit.edu/projects/1368761391/';
   a.textContent = '認証用プロジェクト';
