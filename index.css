@@ -24,7 +24,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 10;
 }
 
 .codeText {
@@ -44,6 +44,10 @@ button {
   padding: 5px;
   z-index: 0;
   overflow: hidden;
+}
+.copyButton {
+  pading-top: 10px;
+  z-index: 20;
 }
 
 button::before {
