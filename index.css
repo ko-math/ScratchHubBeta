@@ -46,12 +46,6 @@ button {
   overflow: hidden;
 }
 
-.header {
-  position: absolute;
-  padding-top: 10px;
-  z-index: 20;
-}
-
 button::before {
   content: "";
   position: absolute;
@@ -81,3 +75,10 @@ button::after {
     transform: rotate(360deg);
   }
 }
+
+.header {
+  position: absolute;
+  padding-top: 10px;
+  z-index: 20;
+}
+
