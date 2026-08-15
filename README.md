@@ -1,6 +1,6 @@
 <h1>ScratchTechnologyNote</h1>
 ねこかわいい
-`#00b2bf`
+<p style="color: #00b2bf">#00b2bf</p>
 <h2>規則</h2>
 <ul>
   <li>ファイルを変更する際は、コメントを先頭に書くこと</li><br>
