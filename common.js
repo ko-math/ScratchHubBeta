@@ -4,7 +4,7 @@
   const header = document.createElement('header');
   header.innerHTML = `
     <h2>募集</h2>
-    <button id="login">ログイン</button>
+    <button id="login" class="header">ログイン</button>
   `;
   div.append(header);
 })();
