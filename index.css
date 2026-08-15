@@ -78,7 +78,7 @@ button::after {
 
 .header {
   position: absolute;
-  top: 35px;
+  top: 30px;
   z-index: 20;
 }
 
