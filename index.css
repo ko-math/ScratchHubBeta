@@ -45,11 +45,11 @@ button {
   z-index: 0;
   overflow: hidden;
 }
-.header {
+/*.header {
   position: absolute;
   padding-top: 10px;
   z-index: 20;
-}
+}*/
 
 button::before {
   content: "";
