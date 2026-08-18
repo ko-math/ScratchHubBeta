@@ -8,6 +8,6 @@
   margin: 0 auto;
 }
 body{
-  background-image: repeating-linear-gradient(-45deg,#ffffff 0px,#ffffff 7.07px,#00b2bf 7.07px,#00b2bf 14.14px);
+  background-image: repeating-linear-gradient(-45deg,#ffffff 0px,#ffffff 14.14px,#00b2bf 14.14px,#00b2bf 28.28px);
 }
 
