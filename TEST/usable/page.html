@@ -40,7 +40,7 @@
     });
     function renderMarkdown() {
       let text = textarea.value;
-      text = text.replace(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi, '');
+      //text = text.replace(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi, '');
       const mathBlocks = [];
       text = text.replace(/\\\[[\s\S]*?\\\]/g, function (match) {
         const id = mathBlocks.length;
