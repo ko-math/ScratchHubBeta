@@ -60,15 +60,32 @@
     breaks: false
     });
     function renderMarkdown() {
-      const markdownText = textarea.value;
-      preview.innerHTML = markdown.render(markdownText);
-      if (window.MathJax) {
+      let text = textarea.value;
+      const mathBlocks = [];
+      text = text.replace(/\\\[[\s\S]*?\\\]/g, function (match) {
+        const id = mathBlocks.length;
+        mathBlocks.push(match);
+        return `<!--MATH_BLOCK_${id}-->`;
+      });
+      text = text.replace(/\$\$[\s\S]*?\$\$/g, function (match) {
+        const id = mathBlocks.length;
+        mathBlocks.push(match);
+    
+        return `<!--MATH_BLOCK_${id}-->`;
+      });
+      let html = markdown.render(text);
+      html = html.replace(
+        /<!--MATH_BLOCK_(\d+)-->/g,
+        function (match, id) {
+          return mathBlocks[id];
+        }
+      );
+      preview.innerHTML = html;
+      // MathJax
+      MathJax.startup.promise.then(function () {
         MathJax.typesetClear([preview]);
-        MathJax.typesetPromise([preview])
-          .catch(function(error) {
-            console.error('MathJax error:', error);
-          });
-      }
+        return MathJax.typesetPromise([preview]);
+      });
     }
     textarea.addEventListener('input', renderMarkdown);
     renderMarkdown();
