@@ -43,7 +43,7 @@
     <script>
       const t = document.querySelector('#textarea');
       const main = document.querySelector('#preview');
-      t.addEventListener('change',() => {
+      t.addEventListener('input',() => {
         main.textContent = t.value;
       });
     </script>
