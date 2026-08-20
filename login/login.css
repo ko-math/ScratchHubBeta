@@ -8,6 +8,9 @@
   display: block;
   box-shadow: 20px 20px 0px hsl(from rgba(0,178,191,1.0) h calc(s - 50%) l / alpha);
 }
+.codeText{
+  margin: 10px auto;
+}
 body{
   background-image: linear-gradient(45deg, rgba(0,178,191,0.5) ,rgba(50,100,100,0.5));
   background-size: cover;
