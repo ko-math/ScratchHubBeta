@@ -2,9 +2,11 @@
 開発メモ:
 ||scriptを実行不可にしてください by ko-math
 ||↑多分出来た by tiiima
+||tiiimaのサニタイズを一回コメントアウトしました、ごめん by ko-math
 履歴:
-8:20 17:49 ko-math
+8/20 17:49 ko-math
 8/20 17:55 tiiima
+8/20 21:47 ko-math
 */
 
 
@@ -30,13 +32,16 @@ function renderMarkdown() {
       return mathBlocks[id];
     }
   );
-  preview.innerHTML = sanitizeHTML(html);
+  //preview.innerHTML = sanitizeHTML(html); comment out by ko-math
+  preview.innerHTML = DOMPurify.sanitize(html);
+  
   // MathJax
   MathJax.startup.promise.then(function () {
     MathJax.typesetClear([preview]);
     return MathJax.typesetPromise([preview]);
   });
 }
+/*
 function sanitizeHTML(html) {
     const doc = new DOMParser().parseFromString(html, "text/html");
     doc.querySelectorAll(
@@ -60,5 +65,6 @@ function sanitizeHTML(html) {
     });
     return doc.body.innerHTML;
 }
+*/
 textarea.addEventListener('input', renderMarkdown);
 renderMarkdown();
