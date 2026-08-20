@@ -1,13 +1,8 @@
-
-#input *{
-  text-align: center;
-}
 #input{
+  text-align: center;
   background-color: #ffffff;
   width: 60%;
   height: 50vh;
-  margin: 0 auto;
-  display: block;
   border-radius: 10px;
 }
 body{
