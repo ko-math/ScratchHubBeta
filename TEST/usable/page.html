@@ -31,38 +31,6 @@
   <main class="l-main-editer js-markdown-editer" id="preview"> </main>
   <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.2.2/markdown-it.min.js"></script>
-  <script>
-    const textarea = document.querySelector('#textarea');
-    const preview = document.querySelector('#preview');
-    const markdown = window.markdownit({
-    html: true,
-    breaks: false
-    });
-    function renderMarkdown() {
-      let text = textarea.value;
-      //text = text.replace(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi, '');
-      const mathBlocks = [];
-      text = text.replace(/\\\[[\s\S]*?\\\]/g, function (match) {
-        const id = mathBlocks.length;
-        mathBlocks.push(match);
-        return `<!--MATH_BLOCK_${id}-->`;
-      });
-      let html = markdown.render(text);
-      html = html.replace(
-        /<!--MATH_BLOCK_(\d+)-->/g,
-        function (match, id) {
-          return mathBlocks[id];
-        }
-      );
-      preview.innerHTML = html;
-      // MathJax
-      MathJax.startup.promise.then(function () {
-        MathJax.typesetClear([preview]);
-        return MathJax.typesetPromise([preview]);
-      });
-    }
-    textarea.addEventListener('input', renderMarkdown);
-    renderMarkdown();
-  </script>
+  <script src="./page.js"></script>
 </body>
 </html>
