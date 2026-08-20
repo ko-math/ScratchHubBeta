@@ -27,28 +27,7 @@
 </head>
 <body>
   <h1>input</h1>
-  <textarea id="textarea">
-  $\vartheta$
-  # h1
-  ## h2
-  
-  ### h3
-  
-  ダミーテキスト
-  
-  > 引用
-  
-  ## テーブル
-  
-  | No | Name | Data |
-  |---:|:----|:----:|
-  | 1 | Y | 45 |
-  | 2 | A | 19 |
-  
-  <p style="color: red; text-align: center;">
-  HTMLも可能ですわよ
-  </p>
-  </textarea>
+  <textarea id="textarea"></textarea>
   <main class="l-main-editer js-markdown-editer" id="preview"> </main>
   <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.2.2/markdown-it.min.js"></script>
@@ -61,16 +40,11 @@
     });
     function renderMarkdown() {
       let text = textarea.value;
+      text = text.replace(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi, '');
       const mathBlocks = [];
       text = text.replace(/\\\[[\s\S]*?\\\]/g, function (match) {
         const id = mathBlocks.length;
         mathBlocks.push(match);
-        return `<!--MATH_BLOCK_${id}-->`;
-      });
-      text = text.replace(/\$\$[\s\S]*?\$\$/g, function (match) {
-        const id = mathBlocks.length;
-        mathBlocks.push(match);
-    
         return `<!--MATH_BLOCK_${id}-->`;
       });
       let html = markdown.render(text);
