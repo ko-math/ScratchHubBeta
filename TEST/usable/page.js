@@ -33,8 +33,8 @@ function renderMarkdown() {
     }
   );
   //preview.innerHTML = sanitizeHTML(html); comment out by ko-math
-  //preview.innerHTML = DOMPurify.sanitize(html);
-  preview.innerHTML = html;
+  preview.innerHTML = DOMPurify.sanitize(html);
+  //preview.innerHTML = html;
   // MathJax
   MathJax.startup.promise.then(function () {
     MathJax.typesetClear([preview]);
