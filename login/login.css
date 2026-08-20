@@ -6,7 +6,7 @@
   border-radius: 10px;
   margin: 0 auto;
   display: block;  
-  box-shadow: 20px 20px 10px rgba(0,178,191,1.0);
+  box-shadow: 20px 20px 10px rgba(0,0,0,1.0);
   /*box-shadow: 20px 20px 10px hsl(from rgba(0,178,191,1.0) h calc(s - 50%) l / alpha);*/
 }
 .codeText{
