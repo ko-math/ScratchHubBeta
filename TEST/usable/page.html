@@ -11,7 +11,58 @@
   <body>
     <h1>input</h1>
     <input type="textarea" id="textarea">
-    <div id="preview"></div>
-    <script src="./page.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js">
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+       tex2jax: {
+        inlineMath: [['$', '$'] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+       }
+      });
+    </script>
+    <!--記述-->
+    <main class="l-main-editer js-markdown-editer" id="preview">
+    $$e^{i\pi} = -1$$
+    # h1
+    ## h2
+    ### h3
+    ダミーテキスト
+    >>引用
+    ## テーブル
+    | No | Name | Data |
+    |---:|----:|:----:|
+    | 1  | Y | 45  |
+    | 2  | A |  19 |
+    <p style="color: red;text-align:center;">HTMLも可能ですわよ</p>
+    </main>
+    <!--記述-->
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.2.2/markdown-it.min.js"></script>
+    <script>
+      const t = document.querySelector('#textarea');
+      const main = document.querySelector('#preview');
+      t.addEventListener('change',() => {
+        main.textContent = t.value;
+      });
+    </script>
+    <script>
+      const markdown_setting = window.markdownit({
+        html: true,
+        breaks: true,
+      });
+      const markdown_editer = $(".js-markdown-editer");
+      const markdown_html = markdown_setting.render(getHtml(markdown_editer));
+      markdown_editer.html(markdown_html);
+      function getHtml(selector) {
+        let markdown_text = $(selector).html();
+        markdown_text = markdown_text.replace(/&lt;/g, "<");
+        markdown_text = markdown_text.replace(/&gt;/g, ">");
+        markdown_text = markdown_text.replace(/&amp;/g, "&");
+      
+        return markdown_text;
+      }
+    </script>
   </body>
 </html>
