@@ -8,5 +8,5 @@ const bodyContent = `
   <h1>An article</h1>
   <p>Hello,World!</p>
 `;
-head.innerHTML = headContent;
-body.innerHTML = bodyContent;
+head.insertAdjacentHTML('beforeend',headContent);
+body.insertAdjacentHTML('beforeend',bodyContent);
