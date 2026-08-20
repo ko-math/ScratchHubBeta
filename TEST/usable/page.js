@@ -1,9 +1,10 @@
 /*
 開発メモ:
 scriptを実行不可にしてください
-
+↑多分出来た
 履歴:
 8:20 17:49 ko-math
+8/20 17:55 tiiima
 */
 
 
@@ -29,12 +30,35 @@ function renderMarkdown() {
       return mathBlocks[id];
     }
   );
-  preview.innerHTML = html;
+  preview.innerHTML = sanitizeHTML(html);
   // MathJax
   MathJax.startup.promise.then(function () {
     MathJax.typesetClear([preview]);
     return MathJax.typesetPromise([preview]);
   });
+}
+function sanitizeHTML(html) {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    doc.querySelectorAll(
+        "script, foreignObject, iframe, object, embed, applet, meta, link"
+    ).forEach(el => el.remove());
+    doc.querySelectorAll("*").forEach(el => {
+        for (const attr of [...el.attributes]) {
+            const name = attr.name.toLowerCase();
+            const value = attr.value.trim();
+            if (name.startsWith("on")) {
+                el.removeAttribute(attr.name);
+                continue;
+            }
+            if (
+                ["href", "src", "action", "formaction", "xlink:href"].includes(name) &&
+                /^\s*javascript\s*:/i.test(value)
+            ) {
+                el.removeAttribute(attr.name);
+            }
+        }
+    });
+    return doc.body.innerHTML;
 }
 textarea.addEventListener('input', renderMarkdown);
 renderMarkdown();
