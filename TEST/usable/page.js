@@ -1,7 +1,7 @@
 /*
 開発メモ:
-scriptを実行不可にしてください
-↑多分出来た
+||scriptを実行不可にしてください by ko-math
+||↑多分出来た by tiiima
 履歴:
 8:20 17:49 ko-math
 8/20 17:55 tiiima
