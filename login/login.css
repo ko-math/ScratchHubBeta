@@ -13,7 +13,7 @@
   margin: 10px auto;
 }
 body{
-  background-image: linear-gradient(rgba(74,74,83,0.5) ,rgba(176,95,5,0.5));
+  background-image: linear-gradient(rgba(176,95,5,0.5),rgba(74,74,83,0.5));
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
