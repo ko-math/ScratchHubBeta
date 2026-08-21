@@ -122,8 +122,8 @@ for(let i = 1;i < rule.length;i += 2){
   d = document.createElement('details');
   d.innerHTML = `
       <summary>${rule[i]}</summary>
+      ${p}
   `;
-  d.append(p);
   main.append(d);
 }
 
