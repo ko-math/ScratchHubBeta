@@ -122,6 +122,6 @@ for(let i = 1;i < rule.length;i += 2){
       <summary>${rule[i]}</summary>
   `;
   d.append(p);
-  main.append(p);
+  main.append(d);
 }
 
