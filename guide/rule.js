@@ -125,7 +125,7 @@ for(let i = 1;i < rule.length;i += 2){
   d.innerHTML = `
       <summary>${rule[i]}</summary>
       <p>
-        ${rule[i + 1]}
+        ${rule[i + 1].trim()}
       </p>
   `;
   main.append(d);
