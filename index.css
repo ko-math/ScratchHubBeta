@@ -35,7 +35,9 @@ header {
   width: 75%;
 }
 
-button {
+button{}
+
+.cbutton{
   position: relative;
   background: #eeeeee;
   color: #000000;
@@ -46,7 +48,7 @@ button {
   overflow: hidden;
 }
 
-button::before {
+.cbutton::before {
   content: "";
   position: absolute;
   inset: -50%;
@@ -61,7 +63,7 @@ button::before {
   z-index: -2;
 }
 
-button::after {
+.cbutton::after {
   content: "";
   position: absolute;
   inset: 2px;
