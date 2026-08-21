@@ -1,6 +1,6 @@
 const rule = [
-`この利用規約（以下，「本規約」といいます。）は，管理人（以下，「運営」といいます。）がこのウェブサイト上で提供するサービス（以下，「本サービス」といいます。）の利用条件を定めるものです。
-登録ユーザーの皆さま（以下，「ユーザー」といいます。）には，本規約に従って，本サービスをご利用いただきます。` ,
+`<p>この利用規約（以下，「本規約」といいます。）は，管理人（以下，「運営」といいます。）がこのウェブサイト上で提供するサービス（以下，「本サービス」といいます。）の利用条件を定めるものです。
+登録ユーザーの皆さま（以下，「ユーザー」といいます。）には，本規約に従って，本サービスをご利用いただきます。</p>` ,
 `第1条（適用）
 
 本規約は，ユーザーと運営との間の本サービスの利用に関わる一切の関係に適用されるものとします。
@@ -106,11 +106,11 @@ const rule = [
 `,
 '以上',
 ];
-const main = document.querySelector('main');
+let main = document.querySelector('main');
 let p = document.createElement('p');
-p.innerHTML = '<details>利用規約</details>';
+p.innerHTML = '<details id="rule-p"><summary>利用規約<summary></details>';
 main.append(p);
-
+main = document.querySelector('#rule-p');
 rule.forEach((e)=>{
   p = document.createElement('p');
   p.innerHTML = e;
