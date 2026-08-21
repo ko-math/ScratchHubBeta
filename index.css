@@ -38,6 +38,7 @@ header {
 button{
   background: transparent;
   border: none;
+  color: #000000;
 }
 
 .cbutton{
