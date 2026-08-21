@@ -111,7 +111,7 @@ let d = document.createElement('details');
 let p = document.createElement('p');
 p.textContent = rule[0];
 d.id = 'rule-p';
-d.innerHTML = '<summary>利用規約<summary>';
+d.innerHTML = '<summary>利用規約</summary>';
 d.append(p);
 main.append(d);
 main = document.querySelector('#rule-p');
