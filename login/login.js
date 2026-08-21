@@ -52,7 +52,7 @@ send1.addEventListener('click',async function(){
     copyButton.remove();
     checkCode.remove();
     b.remove();
-    const comments = await getUser('ko-math','project','1368761391');
+    const comments = await getUser('ko-math','project','1370417823');
     const verify = comments.some((c) => c.content === code && c.author.username === userName);
     if(verify){
       p.textContent = '認証が完了しました。';
