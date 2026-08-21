@@ -117,12 +117,16 @@ main.append(d);
 main = document.querySelector('#rule-p');
 
 for(let i = 1;i < rule.length;i += 2){
+  /*
   p = document.createElement('p');
   p.innerHTML = rule[i + 1];
+  /*
   d = document.createElement('details');
   d.innerHTML = `
       <summary>${rule[i]}</summary>
-      ${p}
+      <p>
+        ${rule[i + 1]}
+      </p>
   `;
   main.append(d);
 }
