@@ -13,8 +13,8 @@
 const textarea = document.querySelector('#textarea');
 const preview = document.querySelector('#preview');
 const markdown = window.markdownit({
-html: true,
-breaks: false
+  html: true,
+  breaks: false
 });
 function renderMarkdown() {
   let text = textarea.value;
