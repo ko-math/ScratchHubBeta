@@ -3,6 +3,7 @@ function addCopyButton(parent,copyText,id){
   const b = document.createElement('button');
   b.textContent = 'copy';
   b.id = id;
+  b.classList.add('cbutton');
   parent.append(b);
   b.addEventListener('click',function (){
     navigator.clipboard.writeText(copyText);
