@@ -35,7 +35,10 @@ header {
   width: 75%;
 }
 
-button{}
+button{
+  background: transparent;
+  border: none;
+}
 
 .cbutton{
   position: relative;
