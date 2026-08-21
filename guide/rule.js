@@ -107,7 +107,7 @@ const rule = [
 ];
 
 let main = document.querySelector('main');
-let d = document.createElement('p');
+let d = document.createElement('datails');
 let p;
 d.id = 'rule-p';
 d.innerHTML = '<summary>利用規約<summary>';
