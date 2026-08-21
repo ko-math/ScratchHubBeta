@@ -111,7 +111,7 @@ let p = document.createElement('p');
 p.innerHTML = '<details id="rule-p"><summary>利用規約<summary></details>';
 main.append(p);
 main = document.querySelector('#rule-p');
-for(let i = 2;i < rule.length;i += 2){
+for(let i = 1;i < rule.length;i += 2){
   p = document.createElement('p');
   p.innerHTML = `
     <details>
