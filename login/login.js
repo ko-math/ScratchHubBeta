@@ -1,4 +1,5 @@
 //const pb1 = new ProgressBar(document.querySelector('#progress1'),100,'progressBar1');
+const AUTHOR = 'ScratchHub_Manager';
 const PROJECTID = '1370417823';
 
 const send1 = document.querySelector('#nameSend');
@@ -53,7 +54,7 @@ send1.addEventListener('click',async function(){
     copyButton.remove();
     checkCode.remove();
     b.remove();
-    const comments = await getUser('ko-math','project',PROJECTID);
+    const comments = await getUser(AUTHOR,'project',PROJECTID);
     const verify = comments.some((c) => c.content === code && c.author.username === userName);
     if(verify){
       p.textContent = '認証が完了しました。';
