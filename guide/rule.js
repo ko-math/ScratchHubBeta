@@ -1,6 +1,6 @@
 const rule = [
-`<p>この利用規約（以下，「本規約」といいます。）は，管理人（以下，「運営」といいます。）がこのウェブサイト上で提供するサービス（以下，「本サービス」といいます。）の利用条件を定めるものです。
-登録ユーザーの皆さま（以下，「ユーザー」といいます。）には，本規約に従って，本サービスをご利用いただきます。</p>` ,
+`この利用規約（以下，「本規約」といいます。）は，管理人（以下，「運営」といいます。）がこのウェブサイト上で提供するサービス（以下，「本サービス」といいます。）の利用条件を定めるものです。
+登録ユーザーの皆さま（以下，「ユーザー」といいます。）には，本規約に従って，本サービスをご利用いただきます。` ,
 `第1条（適用）`,
 `
 本規約は，ユーザーと運営との間の本サービスの利用に関わる一切の関係に適用されるものとします。
@@ -107,17 +107,19 @@ const rule = [
 ];
 
 let main = document.querySelector('main');
-let d = document.createElement('datails');
-let p;
+let d = document.createElement('details');
+let p = document.createElement('p');
+p.textContent = rule[0];
 d.id = 'rule-p';
 d.innerHTML = '<summary>利用規約<summary>';
+d.append(p);
 main.append(d);
 main = document.querySelector('#rule-p');
 
 for(let i = 1;i < rule.length;i += 2){
   p = document.createElement('p');
   p.innerHTML = rule[i + 1];
-  d = document.createElement('datails');
+  d = document.createElement('details');
   d.innerHTML = `
       <summary>${rule[i]}</summary>
   `;
