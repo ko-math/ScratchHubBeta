@@ -41,6 +41,10 @@ button{
   color: #000000;
 }
 
+header button{
+  color: #b5b5ac;
+}
+
 .cbutton{
   position: relative;
   background: #eeeeee;
