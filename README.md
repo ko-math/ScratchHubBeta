@@ -1,4 +1,4 @@
-<h1>ScratchHub</h1><h6>beta</h6>
+<h1>ScratchHub<h6>beta</h6></h1>
 ねこかわいい
 <p>#00b2bf</p>
 <h2>規則</h2>
