@@ -107,18 +107,21 @@ const rule = [
 ];
 
 let main = document.querySelector('main');
-let p = document.createElement('p');
-p.innerHTML = '<details id="rule-p"><summary>利用規約<summary></details>';
-main.append(p);
+let d = document.createElement('p');
+let p;
+d.id = 'rule-p';
+d.innerHTML = '<summary>利用規約<summary>';
+main.append(d);
 main = document.querySelector('#rule-p');
+
 for(let i = 1;i < rule.length;i += 2){
   p = document.createElement('p');
-  p.innerHTML = `
-    <details>
+  p.innerHTML = rule[i + 1];
+  d = document.createElement('datails');
+  d.innerHTML = `
       <summary>${rule[i]}</summary>
-      <p>${rule[i + 1]}</p>
-    </details>
   `;
+  d.append(p);
   main.append(p);
 }
 
