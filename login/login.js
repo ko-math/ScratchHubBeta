@@ -38,6 +38,7 @@ send1.addEventListener('click',async function(){
   const code = generateCode(init());
   checkCode.textContent = code;
   checkCode.classList.add('codeText');
+  checkCode.classList.add('outline');
   const br = document.createElement('br');
   //認証
   const b = document.createElement('button');
