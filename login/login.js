@@ -4,7 +4,7 @@ const PROJECTID = '1370417823';
 
 const send1 = document.querySelector('#nameSend');
 send1.addEventListener('click',async function(){
-  const div = document.querySelector('#input');
+  const div = document.querySelector('#main');
   
   const userNameInput = document.querySelector('#userName');
   const userName = userNameInput.value;
