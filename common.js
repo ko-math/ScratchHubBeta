@@ -11,5 +11,5 @@
 
 const button = document.querySelector('#login'); //遅.getElementById
 button.addEventListener('click',function(){
-  location.assign('/ScratchHub/login/login.html');                    
+  location.assign('/ScratchHubBeta/login/login.html');                    
 });
