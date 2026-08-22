@@ -10,7 +10,7 @@
   /*box-shadow: 20px 20px 10px hsl(from rgba(0,178,191,1.0) h calc(s - 50%) l / alpha);*/
 }
 body{
-  background-image: linear-gradient(rgba(176,95,5,0.5),rgba(74,74,83,0.5));
+  background-image: linear-gradient(rgba(16,16,32,0.5),rgba(0,89,255,0.5));
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
