@@ -1,6 +1,10 @@
 .codeText{
   margin: 10px auto;
+  background-color: #111111;
+  color: #dddddd;
 }
-.inlineCodeText{
-  
+.outline{
+  padding: 10px;
+  border-radius: 5px;
+  width: 75%;
 }
