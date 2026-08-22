@@ -2,6 +2,7 @@
   margin: 10px auto;
   background-color: #111111;
   color: #dddddd;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 }
 .outline{
   padding: 10px;
