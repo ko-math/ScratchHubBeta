@@ -11,5 +11,5 @@
 
 const button = document.querySelector('#login'); //遅.getElementById
 button.addEventListener('click',function(){
-  location.assign('https://ko-math.github.io/ScratchTechnologyNote/login/login.html');                    
+  location.assign('/ScratchHub/login/login.html');                    
 });
